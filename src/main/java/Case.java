@@ -20,6 +20,6 @@ public class Case {
 
     @Override
     public String toString() {
-        return "Case Owner: "+getOwnerName()+" ,Color: "+getColor();
+        return "Case Owner: "+getOwnerName()+" , Color: "+getColor();
     }
 }
