@@ -17,12 +17,12 @@ public class Case {
 
     @Override
     public String toString() {
-        return "Case Owner: "+getOwnerName()+" , Color: "+getColor();
+        return "Case Owner : "+getOwnerName()+" , Color : "+getColor();
     }
 
     public static void main(String args[]){
         Case test1 = new Case("Sue","Maroon");
-        System.out.println("Case Owner: "+test1.getOwnerName()+" Color: "+test1.getColor());
+        System.out.println("Case Owner : "+test1.getOwnerName()+" Color : "+test1.getColor());
         System.out.println(test1.toString());
     }
 

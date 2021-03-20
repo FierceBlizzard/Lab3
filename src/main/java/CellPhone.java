@@ -39,11 +39,12 @@ public class CellPhone {
         this.ringtone = Tone;
     }
 
-    public String incomingCall(){
+    public void incomingCall(){
         if(!isDoNotDisturb()){
-            return getRingTone();
+            System.out.print(getRingTone());
+        }else{
+            System.out.print("shhh");
         }
-        return "shhh";
     }
 
     @Override
@@ -54,7 +55,7 @@ public class CellPhone {
     public static void main(String args[]){
         CellPhone cell = new CellPhone("Sue","888-999-0000");
         cell.setDoNotDisturb(true);
-        System.out.println(cell.incomingCall());
+        cell.incomingCall();
         System.out.println(cell.toString());
 
     }
