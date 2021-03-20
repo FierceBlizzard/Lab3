@@ -27,11 +27,11 @@ public class CellPhone {
         return this.ringtone;
     }
 
-    public boolean getDoNotDisturbed(){
+    public boolean isDoNotDisturb(){
         return this.doNotDisturb;
     }
 
-    public void setDoNotDisturbed(boolean setMode){
+    public void setDoNotDisturb(boolean setMode){
         this.doNotDisturb = setMode;
     }
 
@@ -40,7 +40,7 @@ public class CellPhone {
     }
 
     public String incomingCall(){
-        if(!getDoNotDisturbed()){
+        if(!isDoNotDisturb()){
             return getRingTone();
         }
         return "shhh";
@@ -48,12 +48,12 @@ public class CellPhone {
 
     @Override
     public String toString(){
-        return "Phone Owner: "+ getOwnerName() +" ,Number: "+getPhoneNumber();
+        return "Phone Owner : "+ getOwnerName() +" , Number : "+getPhoneNumber();
     }
 
     public static void main(String args[]){
         CellPhone cell = new CellPhone("Sue","888-999-0000");
-        cell.setDoNotDisturbed(true);
+        cell.setDoNotDisturb(true);
         System.out.println(cell.incomingCall());
         System.out.println(cell.toString());
 
