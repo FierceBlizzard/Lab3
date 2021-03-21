@@ -30,6 +30,20 @@ public class ArrayStaticMethods {
     }
 
     public static int[] moveNegatives(int[] ints) {
-        return ints;
+        int organizedIntArray[] = new int[ints.length];
+        int indexIndicator = 0;
+        for(int l = 0; l < ints.length; l++){
+            if(ints[l] < 0){
+                organizedIntArray[indexIndicator] = ints[l];
+                indexIndicator++;
+            }
+        }
+        for(int x = 0; x < ints.length; x++){
+            if(ints[x] >= 0){
+                organizedIntArray[indexIndicator] = ints[x];
+                indexIndicator++;
+            }
+        }
+        return organizedIntArray;
     }
 }

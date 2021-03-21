@@ -18,7 +18,7 @@ public class ArrayStaticMethodsTest {
         assertEquals(4, ArrayStaticMethods.countChars("The quick brown fox leaps over the lazy dog.".toCharArray(), 'e'));
         assertEquals(6, ArrayStaticMethods.countChars("My mother comes home from Alabama tomorrow".toCharArray(), 'm'));
         assertEquals(3, ArrayStaticMethods.countChars("Can't wait for spring break!".toCharArray(), 'a'));
-        // add another test case
+        assertEquals(5, ArrayStaticMethods.countChars("I hate java and love python and c!".toCharArray(), 'a'));
 
     }
 
@@ -28,7 +28,7 @@ public class ArrayStaticMethodsTest {
         assertArrayEquals(new int[]{1, 6, 6, 1}, ArrayStaticMethods.replace(new int[]{1, 0, 0, 1}, 0, 6));
         assertArrayEquals(new int[]{5, 5, 5, 5}, ArrayStaticMethods.replace(new int[]{5, 0, 0, 5}, 0, 5));
         assertArrayEquals(new int[]{}, ArrayStaticMethods.replace(new int[]{}, 0, 5));
-        // add a test where no replacements occur
+        assertArrayEquals(new int[]{1,2,3,4,5,6,7,8,9,10,11}, ArrayStaticMethods.replace(new int[]{1,2,3,4,5,6,7,8,9,10,11}, 0, 5));
 
     }
 
@@ -39,7 +39,9 @@ public class ArrayStaticMethodsTest {
         assertArrayEquals(new int[]{-1, -5, -7, 1, 3, 0}, ArrayStaticMethods.moveNegatives(new int[]{-1, 1, -5, 3, 0, -7}));
         assertArrayEquals(new int[]{1}, ArrayStaticMethods.moveNegatives(new int[]{1}));
         assertArrayEquals(new int[]{}, ArrayStaticMethods.moveNegatives(new int[]{}));
-        //add 2 tests with: a mix of positive and negative values
+        assertArrayEquals(new int[]{-2, -8, -9, 1, 2, 3}, ArrayStaticMethods.moveNegatives(new int[]{-2, 1, -8, 2, 3, -9}));
+        assertArrayEquals(new int[]{-2, -5, 1, 7, 6, 3}, ArrayStaticMethods.moveNegatives(new int[]{1, 7, -2, -5, 6, 3}));
+
     }
 }
 
